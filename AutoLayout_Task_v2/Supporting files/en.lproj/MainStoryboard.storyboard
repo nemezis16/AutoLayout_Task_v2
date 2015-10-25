@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ORViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTv-TC-zjb">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearText:" destination="2" eventType="touchUpInside" id="lSj-GW-3Z8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1d-MD-rr4">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadText:" destination="2" eventType="touchUpInside" id="ha7-oA-uNl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFz-G8-tma">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b1d-MD-rr4" firstAttribute="baseline" secondItem="wTv-TC-zjb" secondAttribute="baseline" type="default" id="3VG-2m-W2w"/>
+                            <constraint firstItem="b1d-MD-rr4" firstAttribute="trailing" secondItem="dFz-G8-tma" secondAttribute="trailing" type="default" id="6e1-H4-sLn"/>
+                            <constraint firstAttribute="bottom" secondItem="wTv-TC-zjb" secondAttribute="bottom" constant="138" id="GKQ-zi-Rl8"/>
+                            <constraint firstItem="dFz-G8-tma" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="KDT-r1-heQ"/>
+                            <constraint firstItem="wTv-TC-zjb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="36" id="bTX-Yt-yob"/>
+                            <constraint firstAttribute="bottom" secondItem="b1d-MD-rr4" secondAttribute="bottom" constant="130" id="bv5-NY-zz7"/>
+                            <constraint firstItem="dFz-G8-tma" firstAttribute="top" secondItem="3" secondAttribute="top" constant="238" id="wgD-tf-QwF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonClear" destination="wTv-TC-zjb" id="BfB-53-Ipx"/>
+                        <outlet property="buttonLoad" destination="b1d-MD-rr4" id="3Rs-Jn-s0d"/>
+                        <outlet property="textLabel" destination="dFz-G8-tma" id="C4Z-YC-3qX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ORViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ORViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clearText:"/>
+                <relationship kind="action" name="loadText:"/>
+                <relationship kind="outlet" name="buttonClear" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonLoad" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
